@@ -5,6 +5,22 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
 		<link rel="stylesheet" type="text/css" href="css/md.css"/>
 		<title>用户信息查询</title>
+		<style type="text/css">
+			.yzm{
+				width: 1630px;
+				height: 200px;
+				border: 2px solid #587da0;
+				margin-left: 10px;
+				margin-top: 50px;
+			}
+			.tk{
+				width: 1630px;
+				height: 300px;
+				border: 2px solid #587da0;
+				margin-left: 10px;
+				margin-top: 50px;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="toubu">
@@ -15,7 +31,7 @@
 			</ul>
 		</div>
 		<div class="daohang">
-			<h2 style="border-bottom: 1px solid #e6e6e6;padding-bottom: 2px;text-align: center;"><a href="index.html">网站导航</a></h2>
+			<h2 style="border-bottom: 1px solid #e6e6e6;padding-bottom: 2px;text-align: center;">网站导航</h2>
 			<ul style="margin: 0;padding: 0;" class="nav">
 				<li style="border-bottom: 1px dashed #e6e6e6/*#ccc">用户信息查询
 					<ul class="levell">
@@ -33,10 +49,33 @@
 			</ul>	
 		</div>
 		<div class="neirong">
-			<p style="padding-left: 10px;">首页 > 用户信息查询 > 用户信息查询列表</p>
+			<p style="padding-left: 10px;">首页 > 用户信息查询 > 用户信息查询列表</p><hr >
+			<div class="yzm">
+				<p><b>验证码查询：</b></p><hr >
+				<input style="width: 200px;height: 25px;margin: 10px 20px;border: 2px solid #587da0 ;" type="tel" name="" value="请输入要查询手机号" />
+				<input style="width: 50px;height: 29px;" type="button" name="" id="" value="查询" />
+				<table style="width: 1000px;height: 60px;margin: 10px 20px;" border="1" cellspacing="0" cellpadding="0">
+					<tr>
+						<td>当前验证码为：456789</td>
+					</tr>
+				</table>
+			</div>
+			<div class="tk">
+				<p><b>userId&Token查询：</b></p><hr >
+				<input style="width: 200px;height: 25px;margin: 10px 20px;border: 2px solid #587da0 ;" type="tel" name="" value="请输入要查询手机号" />
+				<input style="width: 50px;height: 29px;" type="button" name="" id="" value="查询" />
+				<table style="width: 1000px;height: 150px;margin: 10px 20px;" border="1" cellspacing="0" cellpadding="0">
+					<tr>
+						<td><pre style="font-size: 20px;">
+userid:7079,
+user-token:dab9d211920cfe7b3ea876c8de6d7a96,
+device-info:466D973F-32DA-4AF2-AF19-F24FCF15BCAC
+						</pre>					
+						</td>
+					</tr>
+				</table>
+			</div>
 		</div>
-		<!-- <div class="dibu">
-			底部
-		</div> -->
+
 	</body>
 </html>

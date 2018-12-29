@@ -5,26 +5,35 @@ body{
 				width: auto;
 				height: 70px;
 				background:#ffffff ;
+				/* position: fixed; */
 			}
 			
 			.toubu .tools{
 				color: #6ccac9;
 				line-height: 65px;
+				display: inline;
+				padding-left: 20px;
 			}
 			.toubu .toolss{
 				color: #6ccac9;
 				line-height: 65px;
+				display: inline;
+			}
+			.toubu .toolss ul li{
+				display: inline;
 			}
 
 			.daohang{
 				width: 200px;
-				height:820px;
+				height:790px;
+				/* padding-top: 100px; */
 				background: #ffffff;
 				display: inline-block;
 				margin-top: 10px;
 				margin-left: 15px;
 				border-radius: 5px;
 				vertical-align: top;
+				background-position: fixed;
 			}
 			.daohang ul{
 				list-style: none;
@@ -33,7 +42,7 @@ body{
 			}
 			.neirong{
 				width: 1650px;
-				height: 820px;
+				height: 790px;
 				background: #ffffff;
 				display: inline-block;
 				margin-top: 10px;
@@ -42,8 +51,9 @@ body{
 				}
 			.neirong .chaxun{
 				width: 1650px;
-				height: 755px;
+				height: 735px;
 				border: 1px solid #DCDCDC;
+				border-radius: 5px;
 			}
 			.dibu{
 				width: auto;
