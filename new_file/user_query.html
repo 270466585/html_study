@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<title>用户信息查询列表</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background: #f5f5f5;
+				font-family: arial, 宋体, sans-serif, tahoma, "Microsoft YaHei", 微软雅黑, 宋体;
+			}
+			/* 头部样式 */
+			.toubu{
+				width: 100%;
+				height: 60px;
+				background: #ffffff;
+				position: fixed;
+				z-index: 200;
+			}
+			.toubu p{
+				float: right;
+				position: relative;
+				top: 20px;
+				right: 300px;
+				border: 2px solid #6ccac9;
+				border-radius: 5px;
+				color: black;
+				font-weight: 900;
+			}
+			.toubuh1{
+				float: left;
+				line-height: 60px;
+				margin-left: 30px;
+				font-weight: 900;
+			}
+			.toubuh1 a{
+				text-decoration: none;
+				color: #6ccac9;
+			}
+	
+			.toubulist li,.toubulist a{
+				float: right;
+				list-style: none;
+				margin-left:20px;
+				line-height: 60px;
+				font-size: 23px;
+				font-weight: 900;
+				text-decoration: none;
+				color: #444;
+			}
+			.toubuh1{
+				clear: both;
+				overflow: hidden;
+			}
+			/* 导航样式 */
+			.daohang{
+				width: 180px;
+				background:#ffffff;
+				position: fixed;
+				border-radius: 8px;
+				left: 30px;
+				top: 80px;
+			}
+			.daohangh2{
+				border-bottom: 1px solid #e6e6e6;
+			}
+			.daohanglist li{
+				list-style: url(../img/chaxun5.png);
+				margin: 23px 30px;
+				font-size: 20px;
+			}
+			.daohanglist li li{
+				list-style: none;
+				font-size: 16px;
+				margin: 10px 0;
+			}
+			.daohanglist_none{
+				display: none;
+			}
+			li:hover .daohanglist_none{
+				display: block;
+			}
+			.daohanglist_none a{
+				text-decoration: none;
+			}
+			/* 内容样式 */
+			.neirong{
+				width:1650px ;
+				min-height: 800px;
+				background:#ffffff ;
+				position: relative;
+				left: 240px;
+				top: 80px;
+			}
+			.neirong p,a{
+				position: relative;
+				left: 10px;
+				padding: 10px;
+				text-decoration: none;
+			}
+			/* 首页内容样式 */
+			.neirongbackgroundimg{
+				width:1650px ;
+				min-height: 800px;
+				background: url(../img/backimg3.jpg) no-repeat;
+				background-size: cover;
+				z-index: 199;
+				border-radius:10px;
+				border: 1px solid #e6e6e6;
+				border-top:1px solid #e6e6e6;
+			}
+			.login_user{
+				float: right;
+				width: 150px;
+				height: 45px;
+				border: 1px solid #e6e6e6;
+				border-radius: 5px;
+				position: relative;
+				top: 7px;
+				left: 230px;
+			}
+			.login_list_li{
+				width: auto;
+				height: auto;
+				background: #ffffff;
+				position: relative;
+				top: 200px;
+			}
+			.login_user li{
+				list-style: none;
+				position: relative;
+				left: 30px;
+				bottom: 30px;
+				font-weight: 600;
+			}
+			.login_user li li{
+				position: relative;
+				top: 20px;
+				right:80px;
+			}
+			.login_list{
+				display: none;
+			}
+			li:hover .login_list{
+				display: block;
+			}
+			/* 用户信息内容样式 */
+			.nr_wk{
+				width: 1600px;
+				height: 700px;
+				border: 1px solid #9a9a9a;
+				position: relative;
+				top: 40px;
+				left:25px;
+				border-radius: 5px;
+			}
+			.yzmchaxun{
+				width: 500px;
+				height: 600px;
+				border: 1px solid #9a9a9a;
+				position: relative;
+				top: 50px;
+				left: 100px;
+				display: inline-block;
+				vertical-align: top;
+			}
+			.tkchaxun{
+				width: 500px;
+				height: 600px;
+				border: 1px solid #9a9a9a;
+				position: relative;
+				top: 50px;
+				left: 500px;
+				display: inline-block;
+			}
+			.result{
+				width: 400px;
+				height: 300px;
+				border: 1px solid #9a9a9a;
+				position: relative;
+				top: 50px;
+				left: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="toubu">
+			<h1 class="toubuh1"><a href="#">美哆便捷查询工具</a></h1>
+<!-- 			<ul style="margin-right: 1000px;" class="toubulist">
+				<li><a href="#">用户信息查询</a></li>
+				<li><a href="#">美哆链接集合</a></li>
+				<li><a href="#">工作台</a></li>
+			</ul> -->
+			<p>当前时间&nbsp:&nbsp&nbsp<span id="time" style="color: blueviolet;"></span></p>
+			<div class="login_user">
+				<img style="width: 40px;height: 40px;" src="../img/logo.jpg" >
+				<ul>
+					<li><a href="#">SuperAdmin</a>
+					<ul class="login_list">
+						<li class=""><a href="#">注销</a></li>
+					</ul>
+					</li>
+				</ul>
+			</div>
+			<script>
+			    function mytime(){
+			        var a = new Date();
+			        var b = a.toLocaleTimeString();
+			        var c = a.toLocaleDateString();
+			        document.getElementById("time").innerHTML = c+"&nbsp"+b;
+			        }
+			    setInterval(function() {mytime()},1000);
+			</script>
+		</div>
+		<div class="daohang">
+			<h2 class="daohangh2">网站导航</h2>
+			<ul class="daohanglist">
+				<li style="border-bottom: 1px dashed #e6e6e6;">用户信息查询
+				<ul class="daohanglist_none">
+					<li><a href="#">用户信息列表</a></li>
+				</ul>
+				</li>
+				<li style="border-bottom: 1px dashed #e6e6e6;">美哆链接查询
+				<ul class="daohanglist_none">
+					<li><a href="#">美哆链接列表</a></li>
+				</ul>
+				</li>
+				<li style="border-bottom: 1px dashed #e6e6e6;">数据转换
+				<ul class="daohanglist_none">
+					<li><a href="#">数据转换列表</a></li>
+				</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="neirong">
+			<p><a href="index.html">首页</a> > 用户信息列表</p><hr >
+			<div class="nr_wk">
+				<div class="yzmchaxun">
+					<h6 style="text-align: center;line-height: 50px;font-size: 25px;">验证码查询</h6><hr >
+					<p style="display: inline;position: relative;top: 40px;">手机号：</p>
+					<input style="position: relative;top: 40px;height: 30px;" type="tel" name="" id="" value="请输入查询手机号" />
+					<input style="position: relative;top: 40px;left: 10px;height: 30px;width: 40px;" type="button" name="" id="" value="查询" />
+					<!-- <textarea style="position: relative;top: 80px;left:20px;font-size: 20px;" rows="15" cols="44">验证码为：456789
+					</textarea> -->
+					<div class="result">
+						验证码为:456789
+					</div>
+				</div>
+				<div class="tkchaxun">
+					<h6 style="text-align: center;line-height: 50px;font-size: 25px;">用户信息查询</h6><hr >
+					<p style="display: inline;position: relative;top: 40px;">手机号：</p>
+					<input style="position: relative;top: 40px;height: 30px;" type="tel" name="" id="" value="请输入查询手机号" />
+					<input style="position: relative;top: 40px;left: 10px;height: 30px;width: 40px;" type="button" name="" id="" value="查询" />
+					<!-- <textarea style="position: relative;top: 80px;left:20px;font-size: 20px;" rows="15" cols="44">userid:7090 
+					user-token:sad1a215as4dasd12sd15asd4sd48sd
+						devices-INFO:JKJKASD-1D323F-FDF4-F44F4FED-343D
+					</textarea>		 -->
+					<div class="result">
+						userid:7090 <br>
+						user-token:44a5s4da5s4da5sd7asd2q3we15a4sd
+						devices-info:D4ASD2-21SD45D-1A2SD1-21SD25W
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

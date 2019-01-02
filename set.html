@@ -7,10 +7,15 @@
 		<title>美哆链接集合</title>
 		<style type="text/css">
 			.addurl{
-				width: 800px;
+				width: 500px;
 				height: 500px;
-				background-color: #6CCAC9;
+				background-color: #6CCAC9 ;
+				background-position: top center;
 				display: none;
+				position: absolute;
+				left: 800px;
+				bottom: 200px;
+				
 			}
 			.addurl P{
 				display: inline-block;
@@ -61,7 +66,7 @@
 					</select>
 					<input type="button" name="" id="anniu" onclick = "openDialog()"value="添加新网址" />	
 				</div>
-				<table style="margin: 20px 15px;" bgcolor="#ebeef5" cellspacing="1" cellpadding="20">
+				<table style="margin: 20px 15px;" bgcolor="#ebeef5" cellspacing="1" cellpadding="50">
 					<tr bgcolor="#fff">
 						<th width=50px>ID</th>
 						<th width=150px>项目名称</th>
@@ -139,7 +144,6 @@
 		</div>
 		<div id="light" class="addurl">
 			<p><b>添加项目链接</b></p><hr >
-			<p>×</p>
 			<div class="addcomment">
 				<p>项目名称</p>
 				<input type="text" name="" id="" value="" /><br>
