@@ -200,10 +200,13 @@
 				border-radius: 5px;
 			}
 			.addurl{
-				width: 800px;
+				width: 500px;
 				height: 500px;
-				background-color: #6CCAC9;
+				background-color: #409EFF ;
 				display: none;
+				position: absolute;
+				left: 800px;
+				bottom: 200px;
 			}
 			.addurl P{
 				display: inline-block;
@@ -355,9 +358,28 @@
 						<td width=530px align="center"><a href="#" target="_blank">www.baidu.com</a></td>
 					</tr>
 				</table>
-				<div id="light" class="addurl">
+				<!-- <div id="light" class="addurl">
 					<p><b>添加项目链接</b></p><hr >
 					<p>×</p>
+					<div class="addcomment">
+						<p>项目名称</p>
+						<input type="text" name="" id="" value="" /><br>
+						<p>项目类型</p>
+						<input type="text" name="" id="" value="" /><br>
+						<p>所属环境</p>
+						<select style="width:200px;height: 40px;border-radius: 5px;">
+							<option value ="">请选择所属环境</option>
+							<option value ="">测试环境</option>
+							<option value ="">正式环境</option>
+						</select><br>
+						<p>URL</p>
+						<input type="url" name="" id="" value="" /><br>
+						<input type="button" name="" onclick = "closeDialog()" value="返回" />
+						<input type="button" name="" onclick = "closeDialog()" value="提交" />
+					</div>
+				</div> -->
+				<div id="light" class="addurl">
+					<p><b>添加项目链接</b></p><hr >
 					<div class="addcomment">
 						<p>项目名称</p>
 						<input type="text" name="" id="" value="" /><br>
