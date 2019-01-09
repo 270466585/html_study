@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="css/md.css"/>
+		<title>美哆链接集合</title>
+		<style type="text/css">
+			.addurl{
+				width: 500px;
+				height: 500px;
+				background-color: #409EFF ;
+				display: none;
+				position: absolute;
+				left: 800px;
+				bottom: 200px;
+			}
+			.addurl P{
+				display: inline-block;
+			}
+			.addcomment p{
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="toubu">
+			<h1 style="display: inline;" class="tools">美哆便捷查询工具</h1>
+			<ul style="display: inline; " class="toolss">
+				<li style="display: inline;padding-left: 1300px;"><a style="text-decoration: none;color: #6ccac9;font-weight: 900;" href="query.html">用户信息查询</a></li>
+				<li style="display: inline;margin: 20px;"><a style="text-decoration: none;color: #6ccac9;font-weight: 900;" href="set.html">美哆链接集合</a></li>
+			</ul>
+		</div>
+		<div class="daohang">
+			<h2 style="border-bottom: 1px solid #e6e6e6;padding-bottom: 2px;text-align: center;">网站导航</h2>
+			<ul style="margin: 0;padding: 0;" class="nav">
+				<li style="border-bottom: 1px dashed #e6e6e6/*#ccc">用户信息查询
+					<ul class="levell">
+						<!-- <li>验证码查询</li>
+						<li>token查询</li>
+						<li>userID查询</li> -->
+						<li><a style="text-decoration: none;color: #333333;" href="query.html" target="_top">用户信息查询列表</a></li>
+					</ul>
+				</li>
+				<li style="border-bottom: 1px dashed #e6e6e6 /*#ccc">美哆链接集合
+					<ul class="levell">
+						<li><a style="text-decoration: none;color: #333333;" href="set.html" target="_top">链接集合列表</a></li>
+					</ul>
+				</li>		
+			</ul>	
+		</div>
+		<div class="neirong">
+			<a href="index.html"></a>
+			<p style="padding-left: 10px;text-decoration: none;"><a href="index.html">首页</a> > 美哆链接集合 > 链接集合列表</p>
+			<div class="chaxun">
+				<div class="sousuoyangshi">
+					<img style="margin-left:10px ;" src="img/chaxun3.png" >
+					<input type="search" name="" id="sousuo" value="请输入你要搜索的内容" />
+					<select style="width:200px;height: 40px;margin: 0 80px;border-radius: 5px;">
+						<option value ="">全部</option>
+						<option value ="">如丽美容</option>
+						<option value ="">植发会员网</option>
+						<option value ="">推广网站</option>
+					</select>
+					<input type="button" name="" id="anniu" onclick = "openDialog()"value="添加新网址" />	
+				</div>
+				<table style="margin: 20px 15px;" bgcolor="#ebeef5" cellspacing="1" cellpadding="50">
+					<tr bgcolor="#fff">
+						<th width=50px>ID</th>
+						<th width=150px>项目名称</th>
+						<th width=150px>所属类型</th>
+						<th width=150px>所属平台</th>
+						<th width=530px>正式环境</th>
+						<th width=530px>测试环境</th>
+					</tr>
+					<tr bgcolor="#fff">
+						<td width=50px align="center">1</td>
+						<td width=150px align="center">如丽美容</td>
+						<td width=150px align="center">API</td>
+						<td width=150px align="center">PC</td>
+						<td width=530px align="center">www.baidu.com</td>
+						<td width=530px align="center">www.baidu.com</td>
+					</tr>
+					<tr bgcolor="#fff">
+						<td width=50px align="center">2</td>
+						<td width=150px align="center">如丽美容</td>
+						<td width=150px align="center">后台</td>
+						<td width=150px align="center">PC</td>
+						<td width=530px align="center">www.baidu.com</td>
+						<td width=530px align="center">www.baidu.com</td>
+					</tr>
+					<tr bgcolor="#fff">
+						<td width=50px align="center">3</td>
+						<td width=150px align="center">植发会员网</td>
+						<td width=150px align="center">前端</td>
+						<td width=150px align="center">PC</td>
+						<td width=530px align="center">www.baidu.com</td>
+						<td width=530px align="center">www.baidu.com</td>
+					</tr>
+					<tr bgcolor="#fff">
+						<td width=50px align="center">4</td>
+						<td width=150px align="center">植发会员网</td>
+						<td width=150px align="center">后台</td>
+						<td width=150px align="center">PC</td>
+						<td width=530px align="center">www.baidu.com</td>
+						<td width=530px align="center">www.baidu.com</td>
+					</tr>
+					<tr bgcolor="#fff">
+						<td width=50px align="center">5</td>
+						<td width=150px align="center">推广网站</td>
+						<td width=150px align="center">MIP</td>
+						<td width=150px align="center">Mobile</td>
+						<td width=530px align="center">www.baidu.com</td>
+						<td width=530px align="center">www.baidu.com</td>
+					</tr>
+					<tr bgcolor="#fff">
+						<td width=50px align="center">6</td>
+						<td width=150px align="center">推广网站</td>
+						<td width=150px align="center">M站</td>
+						<td width=150px align="center">Mobile</td>
+						<td width=530px align="center">www.baidu.com</td>
+						<td width=530px align="center">www.baidu.com</td>
+					</tr>
+					<tr bgcolor="#fff">
+						<td width=50px align="center">7</td>
+						<td width=150px align="center">推广网站</td>
+						<td width=150px align="center">前端</td>
+						<td width=150px align="center">PC</td>
+						<td width=530px align="center">www.baidu.com</td>
+						<td width=530px align="center">www.baidu.com</td>
+					</tr>
+					<tr bgcolor="#fff">
+						<td width=50px align="center">8</td>
+						<td width=150px align="center">推广网站</td>
+						<td width=150px align="center">后台</td>
+						<td width=150px align="center">PC</td>
+						<td width=530px align="center">www.baidu.com</td>
+						<td width=530px align="center">www.baidu.com</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div id="light" class="addurl">
+			<p><b>添加项目链接</b></p><hr >
+			<div class="addcomment">
+				<p>项目名称</p>
+				<input type="text" name="" id="" value="" /><br>
+				<p>项目类型</p>
+				<input type="text" name="" id="" value="" /><br>
+				<p>所属环境</p>
+				<select style="width:200px;height: 40px;border-radius: 5px;">
+					<option value ="">请选择所属环境</option>
+					<option value ="">测试环境</option>
+					<option value ="">正式环境</option>
+				</select><br>
+				<p>URL</p>
+				<input type="url" name="" id="" value="" /><br>
+				<input type="button" name="" onclick = "closeDialog()" value="返回" />
+				<input type="button" name="" onclick = "closeDialog()" value="提交" />
+			</div>
+		</div>
+		<div id="fade">
+			
+		</div>
+		<!-- <div class="dibu">
+			底部
+		</div> -->
+	</body>
+	<script type="text/javascript">
+	    $(function(){
+	    })
+	    function openDialog(){
+	        document.getElementById('light').style.display='block';
+	        document.getElementById('fade').style.display='block'
+	    }
+	    function closeDialog(){
+	        document.getElementById('light').style.display='none';
+	        document.getElementById('fade').style.display='none'
+	    }
+	</script>
+
+</html>
