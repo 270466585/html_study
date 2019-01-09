@@ -2,62 +2,57 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
-		<link rel="stylesheet" type="text/css" href="css/md.css"/>
-		<title>首页</title>
-		<style type="text/css">
-			.backimg{
-				width: auto;
-				height: 737px;
-				background: url(img/backimg1.jpg) no-repeat;
-				background-size: cover;
-			}
-		</style>
+		<title>Base</title>
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
 	</head>
 	<body>
 		<div class="toubu">
-			<h1 class="tools">美哆便捷查询工具</h1>
-			<ul class="toolss">
-				<li style="display: inline;padding-left: 1000px;"><a style="text-decoration: none;color: #6ccac9;font-weight: 900;" href="query.html">用户信息查询</a></li>
-				<li style="display: inline;margin: 20px;"><a style="text-decoration: none;color: #6ccac9;font-weight: 900;" href="set.html">美哆链接集合</a></li>
-			</ul>
-			 <!--setInterval实时显示时间-->
-			<p style="width: 200px;border: 2px solid #6ccac9;border-radius: 8px;display: inline-block;" id="time1" style="color: blueviolet;">当前时间：</p>
+			<h1 class="toubuh1"><a href="index.html">美哆便捷查询工具</a></h1>
+			<p>当前时间&nbsp:&nbsp&nbsp<span id="time" style="color: blueviolet;"></span></p>
+			<div class="login_user">
+				<img style="width: 40px;height: 40px;" src="img/logo.jpg" >
+				<ul>
+					<li><a href="#">SuperAdmin</a>
+					<ul class="login_list">
+						<li class=""><a href="#">注销</a></li>
+					</ul>
+					</li>
+				</ul>
+			</div>
 			<script>
 			    function mytime(){
 			        var a = new Date();
 			        var b = a.toLocaleTimeString();
 			        var c = a.toLocaleDateString();
-			        document.getElementById("time1").innerHTML = c+"&nbsp"+b;
+			        document.getElementById("time").innerHTML = c+"&nbsp"+b;
 			        }
 			    setInterval(function() {mytime()},1000);
 			</script>
 		</div>
 		<div class="daohang">
-			<h2 style="border-bottom: 1px solid #e6e6e6;padding-bottom: 2px;text-align: center;">网站导航</h2>
-			<ul style="margin: 0;padding: 0;" class="nav">
-				<li style="border-bottom: 1px dashed #e6e6e6/*#ccc">用户信息查询
-					<ul class="levell">
-						<!-- <li>验证码查询</li>
-						<li>token查询</li>
-						<li>userID查询</li> -->
-						<li><a style="text-decoration: none;color: #333333;" href="query.html" target="_top">用户信息查询列表</a></li>
-					</ul>
+			<h2 class="daohangh2">网站导航</h2>
+			<ul class="daohanglist">
+				<li style="border-bottom: 1px dashed #e6e6e6;">用户信息查询
+				<ul class="daohanglist_none">
+					<li><a href="user_query.html">用户信息列表</a></li>
+				</ul>
 				</li>
-				<li style="border-bottom: 1px dashed #e6e6e6 /*#ccc">美哆链接集合
-					<ul class="levell">
-						<li><a style="text-decoration: none;color: #333333;" href="set.html" target="_top">链接集合列表</a></li>
-					</ul>
-				</li>		
-			</ul>	
+				<li style="border-bottom: 1px dashed #e6e6e6;">美哆链接查询
+				<ul class="daohanglist_none">
+					<li><a href="link_set.html">美哆链接列表</a></li>
+				</ul>
+				</li>
+				<li style="border-bottom: 1px dashed #e6e6e6;">数据转换
+				<ul class="daohanglist_none">
+					<li><a href="#">数据转换列表</a></li>
+				</ul>
+				</li>
+			</ul>
 		</div>
 		<div class="neirong">
-			<p style="padding-left: 10px;">首页</p>
-			<div class="backimg">
+			<p><a href="index.html">首页</a> > 工作台</p>
+			<div class="neirongbackgroundimg">
 			</div>
 		</div>
-		<!-- <div class="dibu">
-			底部
-		</div> -->
 	</body>
 </html>
